@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/map_fragment">
+
+    <RelativeLayout
+        android:id="@+id/trip_detail"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/txt_id"
+            android:textSize="20sp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/txt_name"
+            android:textSize="20sp"
+            android:layout_below="@+id/txt_id"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/txt_coordinate"
+            android:textSize="20sp"
+            android:layout_below="@+id/txt_name"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/txt_address"
+            android:textSize="20sp"
+            android:layout_below="@+id/txt_coordinate"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/txt_arriveTime"
+            android:textSize="20sp"
+            android:layout_below="@+id/txt_address"/>
+
+    </RelativeLayout>
+
+    <fragment
+        android:id="@+id/map"
+        android:layout_below = "@+id/trip_detail"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".LocationMapFragment"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        map:cameraZoom="16"
+        map:uiZoomControls="true"
+    />
+
+</LinearLayout>
