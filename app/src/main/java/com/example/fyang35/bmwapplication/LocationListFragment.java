@@ -69,10 +69,6 @@ public class LocationListFragment extends Fragment {
                     urlConnection.disconnect();
                     jsar = new JSONArray(result.toString());
 
-//                    for(int i = 0; i<jsar.length(); i++){
-//                        JSONObject curOBJ = jsar.getJSONObject(i);
-//                    }
-
                 }catch( Exception e) {
                     e.printStackTrace();
                 }

@@ -21,8 +21,6 @@ public class LocationListAdaptor extends RecyclerView.Adapter<LocationListAdapto
 
     private Activity mActivity;
     private JSONArray mItemArray;
-    private double mLatitude;
-    private double mLongitude;
 
     public LocationListAdaptor(Activity activity,JSONArray dataInput) {
         mActivity = activity;
@@ -96,10 +94,6 @@ public class LocationListAdaptor extends RecyclerView.Adapter<LocationListAdapto
             e.printStackTrace();
         }
 
-
-
     }
-
-
 
 }
