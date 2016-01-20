@@ -65,19 +65,13 @@ public class LocationListFragment extends Fragment {
                     String line;
                     while ((line = reader.readLine()) != null) {
                         result.append(line);
-                        Log.v("JimmyTest", line);
                     }
-
                     urlConnection.disconnect();
-
-
                     jsar = new JSONArray(result.toString());
 
-                    //Log.v("JimmyTest", "size = " + jsar.length());
-                    for(int i = 0; i<jsar.length(); i++){
-                        JSONObject curOBJ = jsar.getJSONObject(i);
-
-                    }
+//                    for(int i = 0; i<jsar.length(); i++){
+//                        JSONObject curOBJ = jsar.getJSONObject(i);
+//                    }
 
                 }catch( Exception e) {
                     e.printStackTrace();
